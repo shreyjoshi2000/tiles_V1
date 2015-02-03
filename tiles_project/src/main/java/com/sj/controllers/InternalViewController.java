@@ -8,6 +8,6 @@ public class InternalViewController {
 	@RequestMapping(value="/getView")
 	public String getView(){
 		
-		return "abc";
+		return "form";
 	}
 }
