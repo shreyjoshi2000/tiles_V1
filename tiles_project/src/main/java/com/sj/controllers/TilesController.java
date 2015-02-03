@@ -9,9 +9,10 @@ import org.springframework.web.bind.annotation.RequestMethod;
 @Controller
 public class TilesController {
 
-	 @RequestMapping(value="/tt", method={RequestMethod.GET})
-	    public String homePage(HttpServletRequest request) {
+	@RequestMapping(value="/tt", method={RequestMethod.GET})
+	public String homePage(HttpServletRequest request) {
+		System.out.println("in controller");
 		return "template";
-	    }
-	
+	}
+
 }
