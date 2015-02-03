@@ -10,8 +10,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class TilesController {
 
 	@RequestMapping(value="/tt", method={RequestMethod.GET})
-	public String homePage(HttpServletRequest request) {
+	public String defaulthomePage(HttpServletRequest request) {
 		return "template";
+	}
+
+	@RequestMapping(value="/welcome", method={RequestMethod.GET})
+	public String homePage(HttpServletRequest request) {
+		return "welcomepage";
 	}
 
 }

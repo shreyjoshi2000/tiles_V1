@@ -6,15 +6,23 @@
 
 <tiles-definitions>
 
- <!-- Default Main Template -->
-    <definition name="template" template="/WEB-INF/jsp/template.jsp">
-        <put-attribute name="title" value="Simple Tiles 2 Example" type="string" />
-        <put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
-        <put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
-        <put-attribute name="body" value="body" type="string" />
-        <put-attribute name="content" value="content" type="string" />
-        <put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
-    </definition>
+	<!-- Default Main Template -->
+	<definition name="template" template="/WEB-INF/jsp/template.jsp">
+		<put-attribute name="title" value="SJ Bank" type="string" />
+		<put-attribute name="header" value="/WEB-INF/jsp/header.jsp" />
+		<put-attribute name="menu" value="/WEB-INF/jsp/menu.jsp" />
+		<put-attribute name="body" value="body" type="string" />
+		<put-attribute name="content" value="content" type="string" />
+		<put-attribute name="footer" value="/WEB-INF/jsp/footer.jsp" />
+	</definition>
+
+	<definition name="welcomepage" extends="template"
+		template="/WEB-INF/jsp/welcomeTiles/welcome.jsp">
+		<put-attribute name="menu" value="/WEB-INF/jsp/welcomeTiles/menu.jsp"></put-attribute>
+		<put-attribute name="body" value="/WEB-INF/jsp/welcomeTiles/body.jsp"></put-attribute>
+		<put-attribute name="content" value="" type="string" />
+
+	</definition>
 
 
 </tiles-definitions>
