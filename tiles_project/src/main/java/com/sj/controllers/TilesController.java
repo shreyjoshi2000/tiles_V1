@@ -11,7 +11,6 @@ public class TilesController {
 
 	@RequestMapping(value="/tt", method={RequestMethod.GET})
 	public String homePage(HttpServletRequest request) {
-		System.out.println("in controller");
 		return "template";
 	}
 
