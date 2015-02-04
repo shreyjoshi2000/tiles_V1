@@ -1,37 +1,40 @@
 package com.sj.controllers;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
-import com.sj.model.Account;
+import com.sj.model.User;
 
 @Controller
-@RequestMapping(value="/BoSJ")
 public class LoginController {
 		
-	private Account account;
 	// specify that get must be called with parameter new.i.e get?new
-	@RequestMapping(method=RequestMethod.GET,params="new")
-	public String getForm(Model model){
-		model.addAttribute(new Account());
+	@RequestMapping(value="/getForm",method=RequestMethod.GET,params="new")
+	public String getForm(){
 		return "form";
+	}
+	
+	@RequestMapping(value="/getSignForm")
+	public String getSignInForm(){
+		return "SignInForm";
 	}
 	
 	
 	@RequestMapping(value="/login",method=RequestMethod.POST)
-	public void saveForm( ){
+	public ModelAndView saveForm(@ModelAttribute("user1") User user1){
+		
+		
+		ModelAndView mav=new ModelAndView("displayUser3");
+		mav.addObject("user2", user1);
+		mav.addObject("msg", "login success");
+		return mav;
 		
 		
 	}
 
-	public Account getAccount() {
-		return account;
-	}
-
-	public void setAccount(Account account) {
-		this.account = account;
-	}
 	
 }

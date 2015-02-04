@@ -1,6 +1,6 @@
 package com.sj.model;
 
-public class UserLogin {
+public class User {
 	private String userName;
 	private String password;
 	public String getUserName() {

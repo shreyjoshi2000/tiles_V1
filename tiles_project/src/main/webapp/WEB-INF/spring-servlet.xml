@@ -15,6 +15,7 @@
 	<mvc:annotation-driven />
 
 	<mvc:default-servlet-handler />
+	
 
 	<bean id="viewResolver1"
 		class="org.springframework.web.servlet.view.UrlBasedViewResolver">
@@ -42,7 +43,7 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
-
+	<!-- To access static page without controller -->
 
 
 </beans>
